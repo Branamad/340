@@ -1,0 +1,96 @@
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background: #ddd;
+    color: black;
+  }
+
+  #outerMain{
+      text-align:center;
+      padding: 20px;
+      border: 2px solid #333;
+      border-radius: 25px;
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      width: 50%;
+  }
+
+  #playerForm {
+      text-align: center;
+      padding: 20px;
+      border: 2px solid #333;
+      border-radius: 25px;
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      width: 50%;
+  }
+
+  #characterForm {
+      text-align: center;
+      padding: 20px;
+      border: 2px solid #333;
+      border-radius: 25px;
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      width: 50%;
+  }
+
+  #guildForm {
+      text-align: center;
+      padding: 20px;
+      border: 2px solid #333;
+      border-radius: 25px;
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      width: 50%;
+  }
+
+  #raidGroupForm {
+      text-align: center;
+      padding: 20px;
+      border: 2px solid #333;
+      border-radius: 25px;
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      width: 50%;
+  }
+
+  #raidGroupTable {
+      top: 25%;
+      left: 25%;
+      width: 50%;
+      margin-left:auto;
+      margin-right:auto;
+  }
+
+  #raidForm {
+     text-align: center;
+      padding: 20px;
+      border: 2px solid #333;
+      border-radius: 25px;
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      width: 50%;
+  }

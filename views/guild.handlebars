@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <title>MMO: Sign up</title>
+  </head>
+  <body>
+	<div class="navbar">
+		<a href="startpage"> Home</a>
+		<a href="character"> Create a Character</a>
+		<a href="guild"> Join a Guild</a>
+		<a href="raidGroup"> Join a Raid</a>
+		<a href="raid"> Raid Management (Dev Tools)</a>
+		<a href="player"> Sign up</a>
+	</div>
+  <div id="guildForm">
+    <form action="/guild">
+      <h2> Join a Guild </h2>
+      Character Name: <br>
+      <input type = "Text" required> <br>
+      Guild Name:<br>
+      <input type = "text" maxlength="20" required><br>
+      <input type="submit" value="Join Guild">
+    </form>
+
+<h3>Current Guilds:</h3>
+	<table>
+	  <thead>
+	    <th>Name</th>
+	    <th>Raid Groups</th>
+	    <th>Num of Characters</th>
+	  </thead>
+	  <tbody>
+	    {{#each guild}}
+	    <tr>
+	      <td>{{name}}</td>
+	      <td>{{raid_groups}}</td>
+	      <td>{{numberofcharacters}}</td>
+	    </tr>
+	    {{/each}}
+	  </tbody> 
+	</table>
+
+	
+    <br>
+    <form action="/guild" method="post">
+      <h2> Create a Guild </h2>
+      Character Name: <br>
+      <input type = "Text" required> <br>
+      Guild Name:<br>
+      <input type = "text" maxlength="20" name="gname" required><br>
+      <input type="submit" value="Create Guild">
+    </form>
+    <br>
+    <form>
+      <h2> Leave a Guild </h2>
+      Character Name: <br>
+      <input type = "Text" required> <br>
+      Guild Name:<br>
+      <input type = "text" maxlength="20" required><br>
+      <input type="submit" value="Leave Guild">
+    </form>
+  </body>
+</html>
+			

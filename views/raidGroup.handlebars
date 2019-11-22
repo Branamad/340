@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    		<meta charset="UTF-8">
+			<link rel="stylesheet" href="/public/stylesheets/style.css">
+    		<title>MMO: Sign up</title>
+  	</head>
+ 
+  	<body>
+	<div class="navbar">
+		<a href="startpage"> Home</a>
+		<a href="character"> Create a Character</a>
+		<a href="guild"> Join a Guild</a>
+		<a href="raidGroup"> Join a Raid</a>
+		<a href="raid"> Raid Management (Dev Tools)</a>
+		<a href="player"> Sign up</a>
+	</div>
+ 
+		<div id="raidGroupForm">
+      			<form action="/raidGroup" method="post">
+			        <h3> Start a raid group </h3>
+			        Guild Name:<br>
+			        <input type = "text" maxlength="20" required><br>
+			        Raid Leader Name:<br>
+			        *If no raid leader is specified a random character from the guild will be selected. 
+			        <br>
+			        <input type = "Text" maxlength = "15"><br>
+			        Raid:
+			        <select name="rgname">
+					  <option value = "Icecrown">Icecrown Citadel</option>
+					  <option value = "Molten Core">Molten Core</option>
+					  <option value = "Onyxia's Lair">Onyxia's Lair</option>
+					  <option value = "Ahn'Qiraj">Ahn'Qiraj</option>
+					  <option value = "Black Temple">Black Temple</option>
+					  <option value = "Karazahn">Karazahn</option>	
+			        </select><br>
+			        <input type="submit" value="Start Raid">
+		      </form>
+  
+		      <form action="/raidGroup">
+				<h3> View active Raid Groups </h3>
+			        Guild Name:<br>
+			        *If no Guild name is given all raid groups will be shown <br>
+			        <input type = "text" maxlength="20"><br>
+			        <input type="submit" value="View Raid Groups">
+		     </form>
+   
+		     <table id="raidGroupTable">
+			       <tr>
+					 <th>Raid Name</th>
+					 <th>Raid Leader</th>
+					 <th>Raid ID</th>
+			       </tr> 
+				{{#each raidgroup}}
+			       <tr>
+					 
+					 <td>{{raid_name}}</td>
+					 <td>{{leader}}</td>
+					 <td>{{id}}</td>
+      				</tr>
+				{{/each}}
+    </table>
+    <form>
+      <h3> End a Raid Group </h3>
+      Raid ID: 
+      <input type = "number" maxlength="20" required><br>
+      <input type="submit" value="End Raid Group">
+    </form>
+    </div>
+  </body>
+</html>
+			

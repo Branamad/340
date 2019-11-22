@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <title>MMO: Sign up</title>
+  </head>
+  <body>
+      {{#each foo}}
+    {{this}}
+    {{/each}}
+	<div class="navbar">
+		<a href="startpage"> Home</a>
+		<a href="character"> Create a Character</a>
+		<a href="guild"> Join a Guild</a>
+		<a href="raidGroup"> Join a Raid</a>
+		<a href="raid"> Raid Management (Dev Tools)</a>
+		<a href="player"> Sign up</a>
+	</div>
+
+        <div id="playerForm">
+
+            <h3>Current Players:</h3>
+                <table>
+	                   <thead>
+	                         <th>User Names</th>
+	                   </thead>
+	                   <tbody>
+	                        {{#each player}}
+	                    <tr>
+	                        <td>{{user_Name}}</td>
+	                    </tr>
+	                         {{/each}}
+	                  </tbody> 
+	            </table>
+            <h2>Sign up!</h2>
+            <form ="signup" action="/player" method="post">
+                Username: <br> <input type = "text" name = "user_Name">
+                <br>
+                Password: <br> <input type = "text" name = "user_password">
+                <br>
+                <input type = "submit" value = "Submit">
+
+            </form>
+
+            <form>
+                <h2> Update Password</h2>
+                    Username: <br> <input type = "text" name = "user_Name">
+                    <br>
+                    Password: <br> <input type = "text" name = "user_password">
+                    <br>
+                    New Password: <br> <input type = "text" name = "newPassword">
+                    <br>
+                    <input type = "submit" value = "Submit">
+    
+            </form>
+
+
+        </div>
+  
+    </body>
+</html>

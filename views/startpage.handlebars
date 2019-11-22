@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    		<meta charset="UTF-8">
+			<link rel="stylesheet" href="/public/stylesheets/style.css">
+    		<title>MMO: Sign up</title>
+  	</head>
+ 
+  	<body>
+	<div class="navbar">
+		<a href="startpage"> Home</a>
+		<a href="character"> Create a Character</a>
+		<a href="guild"> Join a Guild</a>
+		<a href="raidGroup"> Join a Raid</a>
+		<a href="raid"> Raid Management (Dev Tools)</a>
+		<a href="player"> Sign up</a>
+	</div>
+
+      <div id = "outerMain">
+          <h2>MMO Simulator Database Project</h2>
+          <p> Search for a guild or player information now!</p>
+          <div id = "mainSearch">
+                <h3>Current Players:</h3>
+                  <table>
+	                   <thead>
+	                         <th>User Names</th>
+	                   </thead>
+	                  <tbody>
+	                        {{#each player}}
+	                    <tr>
+	                         <td>{{user_Name}}</td>
+	                        </tr>
+	                         {{/each}}
+	                  </tbody> 
+	            </table>
+                  <br>
+              <form>
+                    Username: <br> <input type = "text" name = "Username">
+                    <br>
+                    <input type = "submit" value = "Submit">
+              </form>
+                  <h3>Current Guilds:</h3>
+                  <table>
+	                   <thead>
+	                         <th>Guilds</th>
+	                   </thead>
+	                  <tbody>
+	                        {{#each guild}}
+	                    <tr>
+	                         <td>{{name}}</td>
+	                        </tr>
+	                         {{/each}}
+	                  </tbody> 
+	            </table>
+
+              <form>
+                    Guild Name: <br> <input type = "text" name = "Guildname">
+                    <br>
+                    <input type = "submit" value = "Submit">
+              </form>
+            </div>
+      </div>
+
+  </body>
+</html>

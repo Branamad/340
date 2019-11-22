@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <title>Raid test environment</title>
+  </head>
+  <body>
+       {{#each foo}}
+    {{this}}
+    {{/each}}
+	<div class="navbar">
+		<a href="startpage"> Home</a>
+		<a href="character"> Create a Character</a>
+		<a href="guild"> Join a Guild</a>
+		<a href="raidGroup"> Join a Raid</a>
+		<a href="raid"> Raid Management (Dev Tools)</a>
+		<a href="player"> Sign up</a>
+	</div>
+
+        <div id="raidForm">
+	    <h1>*Developer's only </h1>
+            <h2> Current Raids</h2>
+
+            <table>
+                <thead>
+                    <th>Raid Name</th>
+                </thead>
+                <tbody>
+                    {{#each raid}}
+                    <tr>
+                        <td>{{raid_name}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+            <h2>Design a new raid. </h2>
+            <form action="/raid" method="post">
+                Raid Name: <br> <input type = "text" name = "raidName">
+                <br>
+                Boss Name: <br> <input type = "text" name = "bossName">
+                <br>
+                Experience given: <br> <input type = "text" name = "experience">
+    
+                <br>
+                <input type = "submit" value = "Submit">
+
+            </form>
+
+            <form>
+                <h2> Lookup up old raids</h2>
+                    Raid Name: <br> <input type = "text" name = "raidNameLookup">
+               	    <br>
+                    <input type = "submit" value = "Submit">
+    
+                </form>
+
+        </div>
+  
+    </body>
+</html>
+
+
+
+
+
